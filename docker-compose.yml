@@ -1,0 +1,13 @@
+services:
+  postgres:
+    container_name: perpustakaan-app
+    image: postgres:alpine
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5436:5432"
+
+
+volumes:
+  postgres:
